@@ -22,9 +22,9 @@ const SITE = {
 
 /* YouTube videos on the homepage. "id" is the part after watch?v= */
 const VIDEOS = [
-  { id: "9nFNVfhThzk", title: "iLL RAiSED" },
-  { id: "STz8WgTzUbk", title: "Live @ Thunderbird Hall — Latin Punk Fest '26, Philly PA (Highlights)" },
-  { id: "C4u-oR6Cs24", title: "58th Back To The NYHC Chronicles (Live @ Berlin)" },
+  { id: "9nFNVfhThzk", title: "Live @ Thunderbird Hall — Latin Punk Fest '26, Philly PA (Highlights)" },
+  { id: "STz8WgTzUbk", title: "58th Back To The NYHC Chronicles (Live @ Berlin)" },
+  { id: "C4u-oR6Cs24", title: "T.D.M. Music Video" },
 ];
 
 /* Full show list.
