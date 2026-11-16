@@ -127,7 +127,7 @@
     relEl.innerHTML = RELEASES.map((r) => r.albumId
       ? `<div class="release">
            <iframe class="bc-player" title="${esc(r.title)} on Bandcamp" loading="lazy"
-             src="https://bandcamp.com/EmbeddedPlayer/album=${esc(r.albumId)}/size=large/bgcol=333333/linkcol=e32c14/tracklist=true/transparent=true/" seamless>
+             src="https://bandcamp.com/EmbeddedPlayer/album=${esc(r.albumId)}/size=large/bgcol=333333/linkcol=e32c14/transparent=true/" seamless>
              <a href="${esc(r.url)}">${esc(r.title)}</a>
            </iframe>
          </div>`

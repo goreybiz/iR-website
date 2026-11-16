@@ -185,4 +185,4 @@ section { padding: 4rem 0; }
 
 /* Music page — Bandcamp players */
 .release-grid { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: start; }
-.bc-player { border: 0; width: 100%; max-width: 400px; height: 680px; margin-inline: auto; }
+.bc-player { border: 0; width: 100%; max-width: 350px; height: 687px; margin-inline: auto; }
