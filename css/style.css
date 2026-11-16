@@ -201,3 +201,7 @@ section { padding: 4rem 0; }
 .band-photo { width: 100%; max-width: 900px; margin: 0 0 2rem; }
 .card img { width: 100%; margin-bottom: 1rem; }
 .zoom { cursor: zoom-in; }
+
+/* Show lineup */
+.show-lineup { margin: 0.4rem 0 0; font-size: 0.95rem; }
+.show-lineup strong { color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.85rem; }

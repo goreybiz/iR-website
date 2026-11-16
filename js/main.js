@@ -95,8 +95,11 @@
         <h3 class="show-title">${esc(s.title)}</h3>
         <p class="show-meta">
           ${s.flyer ? `<strong>${shortDate(s.date)}</strong> · ` : ""}${[s.venue, s.city].filter(Boolean).map(esc).join(" — ")}
-          ${s.doors || s.price ? `<br>${[s.doors && "Doors " + s.doors, s.price].filter(Boolean).map(esc).join(" · ")}` : ""}
+          ${s.doors ? `<br>Doors: ${esc(s.doors)}` : ""}
+          ${s.price ? `<br>Entry: ${esc(s.price)}` : ""}
+          ${s.note ? `<br><em>${esc(s.note)}</em>` : ""}
         </p>
+        ${s.lineup && s.lineup.length ? `<p class="show-lineup"><strong>Lineup:</strong> ${s.lineup.map(esc).join(" · ")}</p>` : ""}
       </div>
       ${s.tickets ? `<a class="btn btn-sm" href="${esc(s.tickets)}" target="_blank" rel="noopener">Tickets</a>` : "<span></span>"}
     </article>`;
