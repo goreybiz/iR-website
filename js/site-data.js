@@ -14,6 +14,8 @@ const SITE = {
   bandcampAlbum: "https://illraised.bandcamp.com/album/malcriados",
   instagram: "https://www.instagram.com/illraisednyhc/",
   youtube: "https://www.youtube.com/@illraisednyhc5924",
+  youtubeMusic: "https://music.youtube.com/channel/UCHFZW3CX7jYK66lson-gdkQ",
+  spotify: "https://open.spotify.com/artist/1PlZLLI6GjfDeDgdcFjAoY",
 };
 
 /* YouTube videos on the homepage. "id" is the part after watch?v= */

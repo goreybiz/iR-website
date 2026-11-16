@@ -68,6 +68,8 @@
             <a class="btn btn-outline btn-sm" href="${SITE.instagram}" target="_blank" rel="noopener">Instagram</a>
             <a class="btn btn-outline btn-sm" href="${SITE.youtube}" target="_blank" rel="noopener">YouTube</a>
             <a class="btn btn-outline btn-sm" href="${SITE.bandcampAlbum}" target="_blank" rel="noopener">Bandcamp</a>
+            <a class="btn btn-outline btn-sm" href="${SITE.youtubeMusic}" target="_blank" rel="noopener">YouTube Music</a>
+            <a class="btn btn-outline btn-sm" href="${SITE.spotify}" target="_blank" rel="noopener">Spotify</a>
           </div>
           Copyright © ${new Date().getFullYear()} iLL RAiSED — All Rights Reserved.
         </div>
