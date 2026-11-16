@@ -108,7 +108,7 @@ const GALLERY = [
   { src: "images/gallery/Gallery_Photo_02.JPG", alt: "" },
   { src: "images/gallery/Gallery_Photo_03.JPG", alt: "" },
   { src: "images/gallery/Gallery_Photo_04.JPG", alt: "" },
-  { src: "images/gallery/Gallery_Photo_05.JPG", alt: "" },
+  { src: "images/gallery/Gallery_Photo_05.JPG", alt: "", bw: true },
   { src: "images/gallery/Gallery_Photo_06.JPG", alt: "" },
   { src: "images/gallery/Gallery_Photo_07.JPG", alt: "" },
   { src: "images/gallery/Gallery_Photo_08.JPG", alt: "" },
