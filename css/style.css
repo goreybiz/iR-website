@@ -204,5 +204,5 @@ section { padding: 4rem 0; }
 
 /* Show lineup: underlined label, bands on the line below */
 .show-lineup { margin: 0.5rem 0 0; font-size: 0.95rem; }
-.lineup-label { display: block; text-decoration: underline; text-underline-offset: 3px; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.85rem; font-weight: 700; }
+.lineup-label { display: block; color: var(--accent); text-decoration: underline; text-underline-offset: 3px; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.85rem; font-weight: 700; }
 .lineup-bands { display: block; }
