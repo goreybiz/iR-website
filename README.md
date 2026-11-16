@@ -19,13 +19,15 @@ images/             Put your logo, promo video, flyers and photos here
 - **Change colors or fonts:** edit the top of `css/style.css` (the `:root` block).
 - **Change the menu:** edit `NAV` at the top of `js/main.js`.
 
-## Before you cancel GoDaddy (important)
-The logo and promo video are still loaded from GoDaddy's servers (`img1.wsimg.com`). Those links will break when the account closes.
-1. Download the logo, the promo video, show flyers and gallery photos from GoDaddy.
-2. Save them in `images/`. Then search the files for `wsimg.com` and point each one to your copy, e.g. `images/logo.png`.
+## Images
+All images and the promo video are stored in this repo under `images/`. Nothing loads from GoDaddy anymore.
+- `images/flyers/` holds show flyers named by date (e.g. `2026-12-05.jpg`).
+- `images/logo.png`, `logo-small.png`, `favicon.png` and `apple-touch-icon.png` are the logo and icons.
+- `images/malcriados-cover.jpg`, `band.jpg`, `promo.mp4` and `article-knifetwister.jpg` are page images.
 
 ## Still to fill in
-- Music, Articles and About pages contain placeholders (look for the red dashed boxes).
+- Gallery: add photos to `images/gallery/` and list them in `GALLERY`.
+- Articles: add the link to the Knifetwister interview in `articles/index.html`.
 - Ticket links: add each show's Eventbrite/Dice/KYD URL in the `tickets` field.
 
 ## Free hosting options

@@ -25,6 +25,7 @@ body {
   line-height: 1.6;
 }
 img, video, iframe { max-width: 100%; display: block; }
+img { height: auto; }
 a { color: var(--text); }
 a:hover { color: var(--accent-hover); }
 
@@ -142,11 +143,11 @@ section { padding: 4rem 0; }
 .show-date { font-family: var(--font-head); font-size: 2rem; color: var(--accent); line-height: 1; }
 .show-title { font-size: 1.3rem; margin: 0 0 0.2rem; }
 .show-meta { color: var(--muted); font-size: 0.95rem; margin: 0; }
-.show-flyer { width: 160px; }
+.show-flyer { width: 160px; cursor: zoom-in; border: 1px solid var(--border); }
 .show.has-flyer { grid-template-columns: 160px 1fr auto; }
 @media (max-width: 640px) {
   .show { grid-template-columns: 1fr; gap: 0.5rem; }
-  .show-flyer { width: 100%; max-width: 360px; }
+  .show-flyer { width: 100%; max-width: 240px; }
 }
 .past-list { list-style: none; padding: 0; margin: 0; }
 .past-list li { padding: 0.5rem 0; border-bottom: 1px solid var(--border); }
@@ -186,3 +187,17 @@ section { padding: 4rem 0; }
 /* Music page — Bandcamp players: one under the other, centered */
 .bc-embeds { display: flex; flex-direction: column; align-items: center; gap: 30px; }
 .bc-embeds iframe { max-width: 100%; display: block; }
+
+/* Header logo */
+.logo { display: inline-flex; align-items: center; gap: 0.6rem; }
+.logo img { width: 40px; height: 40px; object-fit: contain; }
+
+/* Homepage album block */
+.album { display: grid; gap: 2rem; grid-template-columns: minmax(0, 360px) minmax(0, 1fr); align-items: center; text-align: left; }
+.album img { width: 100%; }
+@media (max-width: 700px) { .album { grid-template-columns: 1fr; text-align: center; } .album img { max-width: 360px; margin: 0 auto; } }
+
+/* About + Articles images */
+.band-photo { width: 100%; max-width: 900px; margin: 0 0 2rem; }
+.card img { width: 100%; margin-bottom: 1rem; }
+.zoom { cursor: zoom-in; }

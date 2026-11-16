@@ -42,7 +42,7 @@
     header.outerHTML = `${announce}
       <header class="site-header">
         <div class="container nav-wrap">
-          <a class="logo" href="${root}index.html">iLL RAiSED</a>
+          <a class="logo" href="${root}index.html"><img src="${root}images/logo-small.png" alt="" width="40" height="40">iLL RAiSED</a>
           <button class="nav-toggle" aria-label="Menu" aria-expanded="false">☰</button>
           <ul class="nav-links">
             ${NAV.map((n) => `<li><a href="${link(n.href)}"${n.key === page ? ' aria-current="page"' : ""}>${n.label}</a></li>`).join("")}
@@ -90,7 +90,7 @@
   // ---------- Shows ----------
   const showRow = (s) => `
     <article class="show">
-      ${s.flyer ? `<img class="show-flyer" src="${root + esc(s.flyer)}" alt="${esc(s.title)} flyer" loading="lazy">` : `<div class="show-date">${shortDate(s.date)}</div>`}
+      ${s.flyer ? `<img class="show-flyer zoom" src="${root + esc(s.flyer)}" alt="${esc(s.title)} flyer" loading="lazy">` : `<div class="show-date">${shortDate(s.date)}</div>`}
       <div>
         <h3 class="show-title">${esc(s.title)}</h3>
         <p class="show-meta">
@@ -114,29 +114,27 @@
     past.forEach((s) => (byYear[s.date.slice(0, 4)] ??= []).push(s));
     pastEl.innerHTML = Object.keys(byYear).sort().reverse().map((y) => `
       <h2 class="year-heading">${y}</h2>
-      ${y === String(today.getFullYear()) && byYear[y].some((s) => s.venue)
-        ? byYear[y].map(showRow).join("")
-        : `<ul class="past-list">${byYear[y].map((s) =>
-            `<li><span class="d">${shortDate(s.date)}</span>${esc(s.title)}${s.city ? ` <span class="muted">— ${esc(s.city)}</span>` : ""}</li>`).join("")}</ul>`}
+      ${byYear[y].map(showRow).join("")}
     `).join("");
   }
 
   // ---------- Gallery ----------
   const gal = document.getElementById("gallery-grid");
   if (gal && typeof GALLERY !== "undefined") {
-    if (GALLERY.length) {
-      gal.innerHTML = GALLERY.map((g) => `<img src="${root + esc(g.src)}" alt="${esc(g.alt)}" loading="lazy">`).join("");
-      const lb = document.createElement("div");
-      lb.className = "lightbox";
-      lb.innerHTML = "<img alt=''>";
-      document.body.appendChild(lb);
-      gal.addEventListener("click", (e) => {
-        if (e.target.tagName !== "IMG") return;
-        lb.firstChild.src = e.target.src; lb.firstChild.alt = e.target.alt; lb.classList.add("open");
-      });
-      lb.addEventListener("click", () => lb.classList.remove("open"));
-    } else {
-      gal.outerHTML = `<p class="todo">Add photos: put image files in <code>images/gallery/</code> and list them in <code>js/site-data.js</code> under GALLERY.</p>`;
-    }
+    gal.innerHTML = GALLERY.length
+      ? GALLERY.map((g) => `<img class="zoom" src="${root + esc(g.src)}" alt="${esc(g.alt)}" loading="lazy">`).join("")
+      : `<p class="todo">Add photos: put image files in <code>images/gallery/</code> and list them in <code>js/site-data.js</code> under GALLERY.</p>`;
   }
+
+  // ---------- Lightbox: click any .zoom image (flyers, gallery) to view it large ----------
+  const lb = document.createElement("div");
+  lb.className = "lightbox";
+  lb.innerHTML = "<img alt=''>";
+  document.body.appendChild(lb);
+  document.addEventListener("click", (e) => {
+    if (e.target.classList && e.target.classList.contains("zoom")) {
+      lb.firstChild.src = e.target.src; lb.firstChild.alt = e.target.alt; lb.classList.add("open");
+    } else if (lb.contains(e.target)) lb.classList.remove("open");
+  });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") lb.classList.remove("open"); });
 })();
