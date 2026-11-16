@@ -93,7 +93,7 @@ const SHOWS = [
    In the code it gives you, find "album=" followed by a number, e.g. album=1234567890.
    Paste just that number into albumId. Newest release goes first. */
 const RELEASES = [
-  { title: "MALCRiADOS", url: "https://illraised.bandcamp.com/album/malcriados", albumId: "" },
+  { title: "MALCRiADOS", url: "https://illraised.bandcamp.com/album/malcriados", albumId: "1555978148" },
   // { title: "Another release", url: "https://illraised.bandcamp.com/album/...", albumId: "" },
 ];
 
