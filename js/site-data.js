@@ -98,8 +98,8 @@ const SHOWS = [
 /* Music page: the Bandcamp players are pasted directly into music/index.html. */
 
 /* Gallery photos. Put image files in images/gallery/ and list them here.
-   Each photo also needs a small copy with the same name in images/gallery/thumbs/
-   (ask Claude to "process new gallery photos" and it will make these for you).
+   Optional: a small copy with the same name in images/gallery/thumbs/ makes the grid load faster.
+   If there isn't one, the full photo is shown instead (ask Claude to "process new gallery photos").
    Black and white: add  bw: true  to a photo, e.g.
    { src: "images/gallery/Gallery_Photo_01.JPG", alt: "", bw: true }, */
 const GALLERY = [

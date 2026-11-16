@@ -137,7 +137,9 @@
       ? GALLERY.map((g) => {
           // Grid shows the small copy in images/gallery/thumbs/; clicking opens the full-size photo.
           const thumb = g.src.replace(/\/([^/]+)$/, "/thumbs/$1");
-          return `<img class="zoom${g.bw ? " bw" : ""}" src="${root + esc(thumb)}" data-full="${root + esc(g.src)}" alt="${esc(g.alt)}" loading="lazy">`;
+          // If the thumbnail is missing, fall back to the full-size photo so nothing shows as broken.
+          return `<img class="zoom${g.bw ? " bw" : ""}" src="${root + esc(thumb)}" data-full="${root + esc(g.src)}" alt="${esc(g.alt)}" loading="lazy"
+            onerror="this.onerror=null; this.src=this.dataset.full;">`;
         }).join("")
       : `<p class="todo">Add photos: put image files in <code>images/gallery/</code> and list them in <code>js/site-data.js</code> under GALLERY.</p>`;
   }
