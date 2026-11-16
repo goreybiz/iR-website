@@ -219,3 +219,8 @@ section { padding: 4rem 0; }
 
 /* Ticket button for a show that has passed: greyed out, not clickable */
 .btn-disabled, .btn-disabled:hover { background: #3a3b3c; border-color: #3a3b3c; color: #8a8a8a; cursor: not-allowed; }
+
+/* Booking page */
+.booking-text { font-size: 1.15rem; margin: 0 0 0.5rem; }
+.booking-email { font-family: var(--font-head); font-size: clamp(1.4rem, 4vw, 2rem); letter-spacing: 0.04em; color: var(--accent); text-decoration: none; overflow-wrap: anywhere; }
+.booking-email:hover { color: var(--accent-hover); text-decoration: underline; }

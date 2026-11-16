@@ -5,7 +5,7 @@ This is a plain HTML, CSS and JavaScript site. It needs no builder, no database 
 ## Folder layout
 ```
 index.html          Homepage
-music/  shows/  gallery/  articles/  about-ir/   One folder per page (keeps your old URLs like /shows working)
+music/  shows/  gallery/  articles/  about-ir/  booking/   One folder per page (keeps your old URLs like /shows working)
 css/style.css       All colors, fonts and layout
 js/site-data.js     ← EDIT THIS to add shows, videos and gallery photos
 js/main.js          Menu, footer, and code that builds the show and video lists
