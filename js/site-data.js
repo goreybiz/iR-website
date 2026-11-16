@@ -28,7 +28,7 @@ const VIDEOS = [
    tickets: link to Eventbrite / Dice / KYD, etc. */
 const SHOWS = [
   // ---------- 2026 ----------
-  { date: "2026-12-05", title: "La Armada", venue: "Lucky 13 Saloon", city: "NYC, NY", doors: "7PM", price: "$18–$20", tickets: "", flyer: "images/flyers/2026-12-05.jpg" },
+  { date: "2026-12-05", title: "La Armada", venue: "Lucky 13 Saloon", city: "NYC, NY", doors: "7PM", price: "$18–$20", tickets: "https://www.eventbrite.com/e/la-armada-lucky-13-saloon-tickets-1999443872446", flyer: "images/flyers/2026-12-05.jpg" },
   { date: "2026-11-07", title: "Phthalo Phest IV", venue: "The Meadows", city: "Brooklyn, NY", doors: "1:30PM", price: "$20+ (16+)", tickets: "", flyer: "images/flyers/2026-11-07.jpg" },
   { date: "2026-10-24", title: "Parkside Pub Hardcore Halloween", venue: "Parkside Pub", city: "Whitestone, NY", doors: "4PM", price: "Free", tickets: "", flyer: "images/flyers/2026-10-24.jpg" },
   { date: "2026-10-17", title: "Hardcore Show", venue: "Bridge and Tunnel Brewery", city: "Ridgewood, NY", doors: "7PM", price: "$10 (18+)", tickets: "", flyer: "images/flyers/2026-10-17.jpg" },
