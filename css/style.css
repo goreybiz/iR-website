@@ -1,0 +1,188 @@
+/* ==========================================================
+   iLL RAiSED — main stylesheet
+   Change the colors/fonts here and the whole site updates.
+   ========================================================== */
+:root {
+  --bg: #121212;          /* page background */
+  --bg-alt: #28292a;      /* section background (original theme color) */
+  --text: #f2f2f2;
+  --muted: #a8a8a8;
+  --accent: #d71920;      /* buttons, highlights */
+  --accent-hover: #ff2d35;
+  --border: #3a3b3c;
+  --font-head: "Anton", Impact, "Arial Narrow Bold", sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --max: 1100px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+img, video, iframe { max-width: 100%; display: block; }
+a { color: var(--text); }
+a:hover { color: var(--accent-hover); }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-head);
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin: 0 0 0.5em;
+}
+h1 { font-size: clamp(2.4rem, 8vw, 5rem); }
+h2 { font-size: clamp(1.8rem, 5vw, 3rem); }
+h3 { font-size: 1.5rem; }
+
+.container { width: min(100% - 2rem, var(--max)); margin-inline: auto; }
+section { padding: 4rem 0; }
+.section-alt { background: var(--bg-alt); }
+.center { text-align: center; }
+.muted { color: var(--muted); }
+
+/* ---------- Announcement bar ---------- */
+.announce {
+  display: block;
+  background: var(--accent);
+  color: #fff;
+  text-align: center;
+  padding: 0.6rem 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  font-size: 0.9rem;
+}
+.announce:hover { background: var(--accent-hover); color: #fff; }
+
+/* ---------- Header / nav ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(18, 18, 18, 0.95);
+  border-bottom: 1px solid var(--border);
+}
+.nav-wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  min-height: 64px;
+}
+.logo {
+  font-family: var(--font-head);
+  font-size: 1.6rem;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+.nav-links { display: flex; gap: 1.4rem; list-style: none; margin: 0; padding: 0; }
+.nav-links a {
+  text-decoration: none; text-transform: uppercase;
+  font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em;
+}
+.nav-links a[aria-current="page"] { color: var(--accent); }
+.nav-toggle {
+  display: none; background: none; border: 0; color: var(--text);
+  font-size: 1.8rem; cursor: pointer; padding: 0.25rem 0.5rem;
+}
+@media (max-width: 800px) {
+  .nav-toggle { display: block; }
+  .nav-links {
+    display: none; position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; gap: 0; background: var(--bg);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { display: block; padding: 1rem; border-top: 1px solid var(--border); }
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  background: var(--accent); color: #fff;
+  padding: 0.85rem 1.6rem;
+  text-decoration: none; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.9rem;
+  border: 2px solid var(--accent);
+  transition: background 0.15s;
+}
+.btn:hover { background: var(--accent-hover); border-color: var(--accent-hover); color: #fff; }
+.btn-outline { background: transparent; color: var(--text); border-color: var(--text); }
+.btn-outline:hover { background: var(--text); color: var(--bg); border-color: var(--text); }
+.btn-sm { padding: 0.5rem 1rem; font-size: 0.8rem; }
+
+/* ---------- Hero ---------- */
+.hero { text-align: center; padding: 3rem 0 2rem; }
+.hero-logo { max-width: 280px; margin: 0 auto 1.5rem; }
+.hero .tagline { font-family: var(--font-head); font-size: 1.4rem; letter-spacing: 0.2em; color: var(--muted); }
+.hero-video { margin: 2rem auto; max-width: 900px; width: 100%; background: #000; }
+.hero .btn { margin-top: 0.5rem; }
+
+/* ---------- Grids ---------- */
+.video-grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.embed { position: relative; aspect-ratio: 16 / 9; background: #000; }
+.embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video-title { font-size: 0.9rem; color: var(--muted); margin-top: 0.5rem; }
+
+.gallery-grid { display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+.gallery-grid img { width: 100%; aspect-ratio: 1; object-fit: cover; cursor: zoom-in; }
+
+.card-grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.card { background: var(--bg-alt); border: 1px solid var(--border); padding: 1.5rem; }
+.card h3 { margin-bottom: 0.25rem; }
+
+/* ---------- Shows ---------- */
+.year-heading { border-bottom: 3px solid var(--accent); padding-bottom: 0.25rem; margin-top: 3rem; }
+.show {
+  display: grid; gap: 1.25rem; grid-template-columns: 160px 1fr auto;
+  align-items: center;
+  padding: 1.25rem 0; border-bottom: 1px solid var(--border);
+}
+.show-date { font-family: var(--font-head); font-size: 2rem; color: var(--accent); line-height: 1; }
+.show-title { font-size: 1.3rem; margin: 0 0 0.2rem; }
+.show-meta { color: var(--muted); font-size: 0.95rem; margin: 0; }
+.show-flyer { width: 160px; }
+.show.has-flyer { grid-template-columns: 160px 1fr auto; }
+@media (max-width: 640px) {
+  .show { grid-template-columns: 1fr; gap: 0.5rem; }
+  .show-flyer { width: 100%; max-width: 360px; }
+}
+.past-list { list-style: none; padding: 0; margin: 0; }
+.past-list li { padding: 0.5rem 0; border-bottom: 1px solid var(--border); }
+.past-list .d { font-weight: 700; color: var(--accent); margin-right: 0.5rem; }
+
+/* ---------- Placeholder notes (delete once filled in) ---------- */
+.todo {
+  border: 2px dashed var(--accent); padding: 1rem 1.25rem;
+  color: var(--muted); font-size: 0.95rem;
+}
+
+/* ---------- Social + footer ---------- */
+.social { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem 0; text-align: center; color: var(--muted); font-size: 0.85rem;
+}
+
+/* ---------- Lightbox ---------- */
+.lightbox {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.92);
+  display: none; align-items: center; justify-content: center; z-index: 100;
+  cursor: zoom-out; padding: 1rem;
+}
+.lightbox.open { display: flex; }
+.lightbox img { max-height: 90vh; width: auto; }
+
+/* Keep the band's own capitalization (iLL RAiSED, MALCRiADOS) */
+.keep-case { text-transform: none; }
+
+/* About page text */
+.about-text { max-width: 720px; }
+.about-text p { font-size: 1.1rem; margin: 0 0 1.25rem; }
+.about-text .lead { font-size: 1.3rem; font-weight: 700; }
+.about-text strong { color: var(--accent); }
+
+/* Music page — Bandcamp players */
+.release-grid { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: start; }
+.bc-player { border: 0; width: 100%; max-width: 400px; height: 680px; margin-inline: auto; }
