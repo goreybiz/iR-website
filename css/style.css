@@ -183,6 +183,6 @@ section { padding: 4rem 0; }
 .about-text .lead { font-size: 1.3rem; font-weight: 700; }
 .about-text strong { color: var(--accent); }
 
-/* Music page — Bandcamp players */
-.release-grid { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: start; }
-.bc-player { border: 0; width: 100%; max-width: 350px; height: 687px; margin-inline: auto; }
+/* Music page — Bandcamp players: side by side on wide screens, stacked on phones */
+.bc-embeds { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; align-items: flex-start; }
+.bc-embeds iframe { max-width: 100%; display: block; }

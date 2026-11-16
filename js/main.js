@@ -121,23 +121,6 @@
     `).join("");
   }
 
-  // ---------- Music (Bandcamp players) ----------
-  const relEl = document.getElementById("releases");
-  if (relEl && typeof RELEASES !== "undefined") {
-    relEl.innerHTML = RELEASES.map((r) => r.albumId
-      ? `<div class="release">
-           <iframe class="bc-player" title="${esc(r.title)} on Bandcamp" loading="lazy"
-             src="https://bandcamp.com/EmbeddedPlayer/album=${esc(r.albumId)}/size=large/bgcol=333333/linkcol=e32c14/transparent=true/" seamless>
-             <a href="${esc(r.url)}">${esc(r.title)}</a>
-           </iframe>
-         </div>`
-      : `<div class="card release">
-           <h3 class="keep-case">${esc(r.title)}</h3>
-           <p class="muted">Player coming soon.</p>
-           <a class="btn btn-sm" href="${esc(r.url)}" target="_blank" rel="noopener">Listen on Bandcamp</a>
-         </div>`).join("");
-  }
-
   // ---------- Gallery ----------
   const gal = document.getElementById("gallery-grid");
   if (gal && typeof GALLERY !== "undefined") {
