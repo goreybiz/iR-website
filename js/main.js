@@ -13,8 +13,8 @@
     { label: "Videos", href: "#videos", key: "videos" },
     { label: "Gallery", href: "gallery/", key: "gallery" },
     { label: "Articles", href: "articles/", key: "articles" },
-    { label: "About iR", href: "about-ir/", key: "about" },
     { label: "Booking", href: "booking/", key: "booking" },
+    { label: "About iR", href: "about-ir/", key: "about" },
   ];
 
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) =>
