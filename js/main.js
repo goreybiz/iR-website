@@ -101,7 +101,11 @@
         </p>
         ${s.lineup && s.lineup.length ? `<div class="show-lineup"><span class="lineup-label">Lineup:</span><span class="lineup-bands">${s.lineup.map(esc).join(" · ")}</span></div>` : ""}
       </div>
-      ${s.tickets ? `<a class="btn btn-sm" href="${esc(s.tickets)}" target="_blank" rel="noopener">Tickets</a>` : "<span></span>"}
+      ${s.tickets
+        ? (parse(s.date) < today
+            ? `<span class="btn btn-sm btn-disabled" title="This show has passed">Tickets</span>`
+            : `<a class="btn btn-sm" href="${esc(s.tickets)}" target="_blank" rel="noopener">Tickets</a>`)
+        : "<span></span>"}
     </article>`;
 
   const upEl = document.getElementById("upcoming-shows");

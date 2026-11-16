@@ -206,3 +206,6 @@ section { padding: 4rem 0; }
 .show-lineup { margin: 0.5rem 0 0; font-size: 0.95rem; }
 .lineup-label { display: block; color: var(--accent); text-decoration: underline; text-underline-offset: 3px; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.85rem; font-weight: 700; }
 .lineup-bands { display: block; }
+
+/* Ticket button for a show that has passed: greyed out, not clickable */
+.btn-disabled, .btn-disabled:hover { background: #3a3b3c; border-color: #3a3b3c; color: #8a8a8a; cursor: not-allowed; }
