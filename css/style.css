@@ -126,7 +126,7 @@ section { padding: 4rem 0; }
 .hero-logo { max-width: 240px; width: 55%; margin: 0 auto 1.25rem; filter: drop-shadow(0 4px 16px rgba(0,0,0,0.6)); }
 .hero h1 { text-shadow: 0 3px 18px rgba(0,0,0,0.7); }
 .hero .tagline { font-family: var(--font-head); font-size: 1.4rem; letter-spacing: 0.2em; color: #e6e6e6; }
-.hero .btn { margin-top: 0.75rem; }
+.hero-buttons { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 0.75rem; }
 @media (prefers-reduced-motion: reduce) { .hero-bg { display: none; } .hero { background: #000 url("../images/hero-poster.jpg") center / cover; } }
 
 /* ---------- Grids ---------- */
