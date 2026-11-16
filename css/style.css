@@ -206,7 +206,6 @@ section { padding: 4rem 0; }
 .album p { margin: 0 0 1rem; }
 .album iframe { max-width: 100%; margin: 1rem auto 2rem; }
 .album-title { font-size: clamp(1.4rem, 3.5vw, 2rem); margin: 0 0 0.4rem; }
-.album-tagline { font-size: 1rem; letter-spacing: 0.15em; color: var(--muted); }
 
 /* About + Articles images */
 .band-photo { width: 100%; max-width: 900px; margin: 0 0 2rem; }
