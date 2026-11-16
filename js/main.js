@@ -20,7 +20,9 @@
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) =>
     ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
-  const link = (href) => (href.startsWith("#") ? root + "index.html" + href : root + (href || "index.html"));
+  // Link to folders ("./", "../shows/") rather than index.html, so URLs stay clean (illraised.com/ not /index.html)
+  const home = root || "./";
+  const link = (href) => (href.startsWith("#") ? home + href : href ? root + href : home);
 
   // ---------- Dates ----------
   const parse = (d) => { const [y, m, day] = d.split("-").map(Number); return new Date(y, m - 1, day); };
@@ -43,7 +45,7 @@
     header.outerHTML = `${announce}
       <header class="site-header">
         <div class="container nav-wrap">
-          <a class="logo" href="${root}index.html"><img src="${root}images/logo-small.png" alt="" width="40" height="40">iLL RAiSED</a>
+          <a class="logo" href="${home}"><img src="${root}images/logo-small.png" alt="" width="40" height="40">iLL RAiSED</a>
           <button class="nav-toggle" aria-label="Menu" aria-expanded="false">☰</button>
           <ul class="nav-links">
             ${NAV.map((n) => `<li><a href="${link(n.href)}"${n.key === page ? ' aria-current="page"' : ""}>${n.label}</a></li>`).join("")}
