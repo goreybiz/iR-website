@@ -71,6 +71,7 @@
             <a class="btn btn-outline btn-sm" href="${SITE.youtubeMusic}" target="_blank" rel="noopener">YouTube Music</a>
             <a class="btn btn-outline btn-sm" href="${SITE.spotify}" target="_blank" rel="noopener">Spotify</a>
             <a class="btn btn-outline btn-sm" href="${SITE.appleMusic}" target="_blank" rel="noopener">Apple Music</a>
+            <a class="btn btn-outline btn-sm" href="${SITE.tidal}" target="_blank" rel="noopener">Tidal</a>
           </div>
           Copyright © ${new Date().getFullYear()} iLL RAiSED — All Rights Reserved.
         </div>

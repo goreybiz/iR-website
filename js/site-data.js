@@ -17,6 +17,7 @@ const SITE = {
   youtubeMusic: "https://music.youtube.com/channel/UCHFZW3CX7jYK66lson-gdkQ",
   spotify: "https://open.spotify.com/artist/1PlZLLI6GjfDeDgdcFjAoY",
   appleMusic: "https://music.apple.com/us/artist/ill-raised/1760883087",
+  tidal: "https://tidal.com/artist/ill-raised/49503453",
 };
 
 /* YouTube videos on the homepage. "id" is the part after watch?v= */
