@@ -134,7 +134,7 @@
   const gal = document.getElementById("gallery-grid");
   if (gal && typeof GALLERY !== "undefined") {
     gal.innerHTML = GALLERY.length
-      ? GALLERY.map((g) => `<img class="zoom" src="${root + esc(g.src)}" alt="${esc(g.alt)}" loading="lazy">`).join("")
+      ? GALLERY.map((g) => `<img class="zoom${g.bw ? " bw" : ""}" src="${root + esc(g.src)}" alt="${esc(g.alt)}" loading="lazy">`).join("")
       : `<p class="todo">Add photos: put image files in <code>images/gallery/</code> and list them in <code>js/site-data.js</code> under GALLERY.</p>`;
   }
 
@@ -145,7 +145,8 @@
   document.body.appendChild(lb);
   document.addEventListener("click", (e) => {
     if (e.target.classList && e.target.classList.contains("zoom")) {
-      lb.firstChild.src = e.target.src; lb.firstChild.alt = e.target.alt; lb.classList.add("open");
+      lb.firstChild.src = e.target.src; lb.firstChild.alt = e.target.alt;
+      lb.firstChild.classList.toggle("bw", e.target.classList.contains("bw")); lb.classList.add("open");
     } else if (lb.contains(e.target)) lb.classList.remove("open");
   });
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") lb.classList.remove("open"); });

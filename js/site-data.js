@@ -97,7 +97,9 @@ const SHOWS = [
 
 /* Music page: the Bandcamp players are pasted directly into music/index.html. */
 
-/* Gallery photos. Put image files in images/gallery/ and list them here. */
+/* Gallery photos. Put image files in images/gallery/ and list them here.
+   Black and white: add  bw: true  to a photo, e.g.
+   { src: "images/gallery/Gallery_Photo_01.JPG", alt: "", bw: true }, */
 const GALLERY = [
   // { src: "images/gallery/photo1.jpg", alt: "Live at TV Eye, 2026" },
   { src: "images/gallery/Gallery_Photo_01.JPG", alt: "" },
