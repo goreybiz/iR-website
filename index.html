@@ -21,11 +21,13 @@
   <main>
 
     <section class="hero">
-      <div class="container">
+      <!-- Background video: silent, loops forever. Swap images/hero-bg.mp4 to change it. -->
+      <video class="hero-bg" src="images/hero-bg.mp4" poster="images/hero-poster.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+      <div class="hero-shade"></div>
+      <div class="container hero-content">
         <img class="hero-logo" src="images/logo.png" alt="iLL RAiSED logo">
         <h1 class="keep-case">iLL RAiSED / MALCRiADOS</h1>
         <p class="tagline">QUEENS, NY</p>
-        <video class="hero-video" src="images/promo.mp4" poster="images/malcriados-cover.jpg" controls playsinline muted preload="metadata"></video>
         <a class="btn" href="https://illraised.bandcamp.com/album/malcriados" target="_blank" rel="noopener">Support us on Bandcamp</a>
       </div>
     </section>

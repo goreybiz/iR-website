@@ -23,7 +23,8 @@ images/             Put your logo, promo video, flyers and photos here
 All images and the promo video are stored in this repo under `images/`. Nothing loads from GoDaddy anymore.
 - `images/flyers/` holds show flyers named by date (e.g. `2026-12-05.jpg`).
 - `images/logo.png`, `logo-small.png`, `favicon.png` and `apple-touch-icon.png` are the logo and icons.
-- `images/malcriados-cover.jpg`, `band.jpg`, `promo.mp4` and `article-knifetwister.jpg` are page images.
+- `images/malcriados-cover.jpg`, `band.jpg` and `article-knifetwister.jpg` are page images.
+- `images/hero-bg.mp4` is the silent looping homepage background (`hero-poster.jpg` shows while it loads).
 
 ## Still to fill in
 - Gallery: add photos to `images/gallery/` and list them in `GALLERY`.
