@@ -100,4 +100,14 @@ const SHOWS = [
 /* Gallery photos. Put image files in images/gallery/ and list them here. */
 const GALLERY = [
   // { src: "images/gallery/photo1.jpg", alt: "Live at TV Eye, 2026" },
+  { src: "images/gallery/Gallery_Photo_01.JPG", alt: "" },
+  { src: "images/gallery/Gallery_Photo_02.JPG", alt: "" },
+  { src: "images/gallery/Gallery_Photo_03.JPG", alt: "" },
+  { src: "images/gallery/Gallery_Photo_04.JPG", alt: "" },
+  { src: "images/gallery/Gallery_Photo_05.JPG", alt: "" },
+  { src: "images/gallery/Gallery_Photo_06.JPG", alt: "" },
+  { src: "images/gallery/Gallery_Photo_07.JPG", alt: "" },
+  { src: "images/gallery/Gallery_Photo_08.JPG", alt: "" },
+  { src: "images/gallery/Gallery_Photo_09.JPG", alt: "" },
+  { src: "images/gallery/Gallery_Photo_10.JPG", alt: "" },
 ];
