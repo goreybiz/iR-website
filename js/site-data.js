@@ -70,9 +70,8 @@ const SHOWS = [
   { date: "2024-04-27", title: "Ostara Gathering Night", city: "LIC, NY", flyer: "images/flyers/2024-04-27.jpg" },
   { date: "2024-04-11", title: "Queenz NYHC & King Mob", city: "Queens, NY", flyer: "images/flyers/2024-04-11.jpg" },
   { date: "2024-03-22", title: "Trashley Productions", city: "Kearny, NJ", flyer: "images/flyers/2024-03-22.jpg" },
+  { date: "2024-01-25", title: "Gold Sounds", city: "Brooklyn, NY", flyer: "images/flyers/2024-01-25.jpg" },
 
-  // ---------- 2023 ----------
-  { date: "2023-01-25", title: "Gold Sounds", city: "Brooklyn, NY", flyer: "images/flyers/2023-01-25.jpg" },
 
   // ---------- 2022 ----------
   { date: "2022-07-30", title: "Summer Rooftop Bash", city: "Bushwick, NY", flyer: "images/flyers/2022-07-30.jpg" },

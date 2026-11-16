@@ -27,7 +27,6 @@ All images and the promo video are stored in this repo under `images/`. Nothing 
 
 ## Still to fill in
 - Gallery: add photos to `images/gallery/` and list them in `GALLERY`.
-- Articles: add the link to the Knifetwister interview in `articles/index.html`.
 - Ticket links: add each show's Eventbrite/Dice/KYD URL in the `tickets` field.
 
 ## Free hosting options
