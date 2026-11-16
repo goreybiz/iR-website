@@ -88,14 +88,7 @@ const SHOWS = [
   { date: "2021-09-11", title: "NYHC Never Forgets (outdoor)", city: "Queens, NY" },
 ];
 
-/* Music page — Bandcamp players.
-   To get an album's ID: on Bandcamp open the album → Share/Embed → Embed this album.
-   In the code it gives you, find "album=" followed by a number, e.g. album=1234567890.
-   Paste just that number into albumId. Newest release goes first. */
-const RELEASES = [
-  { title: "MALCRiADOS", url: "https://illraised.bandcamp.com/album/malcriados", albumId: "1555978148" },
-  // { title: "Another release", url: "https://illraised.bandcamp.com/album/...", albumId: "" },
-];
+/* Music page: the Bandcamp players are pasted directly into music/index.html. */
 
 /* Gallery photos. Put image files in images/gallery/ and list them here. */
 const GALLERY = [
