@@ -202,6 +202,7 @@ section { padding: 4rem 0; }
 .card img { width: 100%; margin-bottom: 1rem; }
 .zoom { cursor: zoom-in; }
 
-/* Show lineup */
-.show-lineup { margin: 0.4rem 0 0; font-size: 0.95rem; }
-.show-lineup strong { color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.85rem; }
+/* Show lineup: underlined label, bands on the line below */
+.show-lineup { margin: 0.5rem 0 0; font-size: 0.95rem; }
+.lineup-label { display: block; text-decoration: underline; text-underline-offset: 3px; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.85rem; font-weight: 700; }
+.lineup-bands { display: block; }

@@ -99,7 +99,7 @@
           ${s.price ? `<br>Entry: ${esc(s.price)}` : ""}
           ${s.note ? `<br><em>${esc(s.note)}</em>` : ""}
         </p>
-        ${s.lineup && s.lineup.length ? `<p class="show-lineup"><strong>Lineup:</strong> ${s.lineup.map(esc).join(" · ")}</p>` : ""}
+        ${s.lineup && s.lineup.length ? `<div class="show-lineup"><span class="lineup-label">Lineup:</span><span class="lineup-bands">${s.lineup.map(esc).join(" · ")}</span></div>` : ""}
       </div>
       ${s.tickets ? `<a class="btn btn-sm" href="${esc(s.tickets)}" target="_blank" rel="noopener">Tickets</a>` : "<span></span>"}
     </article>`;
