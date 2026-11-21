@@ -14,6 +14,7 @@
     { label: "Gallery", href: "gallery/", key: "gallery" },
     { label: "Articles", href: "articles/", key: "articles" },
     { label: "Booking", href: "booking/", key: "booking" },
+    { label: "Press Kit", href: "epk/", key: "epk" },
     { label: "About iR", href: "about-ir/", key: "about" },
   ];
 
