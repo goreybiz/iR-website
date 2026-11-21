@@ -229,3 +229,8 @@ section { padding: 4rem 0; }
 
 /* Black and white photos (add bw: true to a GALLERY photo) */
 .bw { filter: grayscale(100%); }
+
+/* Press kit (EPK) page and Booking page buttons */
+.epk-buttons { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: 1.25rem 0 1.5rem; }
+.epk-cta { margin-top: 2.5rem; }
+.epk-preview { display: block; width: min(100%, 820px); height: auto; margin: 1.5rem auto 0; border: 1px solid var(--border); }

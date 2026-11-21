@@ -123,6 +123,7 @@ The gallery grid loads a small copy of each photo from `images/gallery/thumbs/` 
 | Articles | `articles/index.html` | One card per article. Copy the `<article class="card">` block to add more. |
 | Booking | `booking/index.html` | Contact email (illraised@gmail.com). Clicking it opens the visitor's email app. |
 | About iR | `about-ir/index.html` | Band photo and bio. |
+| Press Kit | `epk/index.html` | illraised.com/epk. Preview of the EPK with Download PDF / JPG buttons. Linked from the Booking page, not the menu. To update the EPK, replace `epk/iLL-RAiSED-EPK.pdf` and `epk/iLL-RAiSED-EPK.jpg` with new files of the same name. |
 
 **Menu order** is set in `NAV` at the top of `js/main.js`.
 
